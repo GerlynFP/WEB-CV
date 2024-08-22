@@ -1,0 +1,596 @@
+/* Fuente */
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} /* fuente */
+  
+/* barra de scroll */
+body::-webkit-scrollbar {
+    width: 12px;               
+}
+  
+  body::-webkit-scrollbar-track {
+    background: #333232  ; 
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: black ;    
+    border-radius: 20px;        
+    border: 3px solid black;  
+}
+/* cierre de barra de scroll */
+
+nav{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 25px 90px;
+    z-index: 100000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+nav h1{
+    position: relative;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    position: relative;
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+
+
+.banner h1{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.banner h3{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+.banner{
+    position: relative;
+    background-image: url(img/monstera-deliciosa-hojas-plantas-humedas-jardin.jpg);
+    background-position: center;
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    height: 100vb; /* Hace que el main ocupe el 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto para que sea visible sobre la imagen */
+    text-align: center;
+    margin-bottom: 0;
+}
+/*
+#titulo{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    color: white;
+    font-size: 18px;
+}
+*/
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* seccion sobre mi */
+.sobre{
+    display: flex;
+    justify-content:center ;
+    padding: 60px 48px;
+    
+}
+
+#tarjeta{
+    border-radius: 15px;
+    margin-top: 35px;
+    width: 93%;
+    height: auto;
+    -webkit-box-shadow: -6px 12px 53px -27px rgba(0,0,0,0.75);
+    -moz-box-shadow: -6px 12px 53px -27px rgba(0,0,0,0.75);
+    box-shadow: -6px 12px 53px -27px rgba(0,0,0,0.75);
+}
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;   
+}
+
+.flexbox-container > div {
+	width: 50%;
+	padding: 10px;
+  background: #fff;
+}
+
+.flexbox-container > div:first-child {
+	margin-right: 10px;
+}
+
+.primerLado{
+    display: inline-block;
+}
+
+.info{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8.5%;
+    margin-left: 3px;
+}
+
+.primerLado strong{
+    font-weight: bold;
+}
+.primerLado p{
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* barras de progeso */
+.contenedor{
+    position: relative;
+    width: 98%;
+    padding: 5px 20px;
+}
+
+.contenedor .skill{
+    margin: 20px 0;
+}
+
+.contenedor .skill p{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor .skill .progreso{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #999;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.contenedor .skill .progreso::before{
+    content: '';
+    position: absolute;
+    width: var(--wth);
+    height: 100%;
+    background-color: #0280fe;
+} /* cierre de las barras de progreso */
+
+.primeroAbajo h3{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 15px 0px;
+}
+
+#img{
+    width: 38%;
+    padding: 15px;
+    float: left;
+}
+
+#h1{
+    font-size: 33px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 5px;
+}
+#h1 hr{
+    height: 3px;
+    width: 11%;
+    margin-top: 10px;
+    margin-left: 0;
+    background-color: #0280fe;
+}
+
+#segundoLado{
+    font-size: 16.5px;
+    margin: 10px;
+    line-height: 20px;
+}
+
+/* Area de educaion */
+#educacion{
+    padding-top: 90px;
+}
+
+.edu{
+    background-image: url(img/fondo-pantalla-hojas-monstera-negro.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+}
+
+.edu h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.edu hr{
+    height: 3px;
+    width: 4%;
+    margin-top: 3px;
+    background-color: white;
+}
+
+
+/* Reseteo básico de márgenes y paddings */
+body, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajusta las tarjetas en columnas flexibles */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro del tamaño total */
+}
+
+/* Estilo de cada tarjeta individual */
+.tarjeta {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.icono {
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.icono i{
+    font-size: 30px;
+}
+
+.icono img {
+    width: 40px;
+    height: 40px;
+}
+
+.tarjeta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.tarjeta p {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+} /*cierre de tarjetas*/
+
+
+/*Ciere del area de educacion*/
+
+/* Area de contactos */
+.contacto h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contacto h3{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.contacto hr{
+    height: 3px;
+    width: 4%;
+    margin-top: 10px;
+    background-color: #0280fe;
+}
+
+#contacto {
+    padding-top: 94px;
+}
+
+#tarjetaContactos{
+    border-radius: 8px;
+    width: 86.5%;
+    height: auto;
+    margin: 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: 6.8%;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+}
+
+#sp{
+    margin-left: 15px;
+}
+
+.botones a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0280fe; /* Color de fondo */
+    color: #0280fe; /* Color del texto */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; /* Bordes redondeados */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    line-height: 50px; /* Alineación vertical del texto */
+    font-size: 24px;
+    padding: 3px;
+    margin-left: 15px;
+    transition: 0.7s ease;
+}
+
+.botones span{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.botones a:hover{
+    background-color: #0280fe;
+    color: white;
+    transition: 0.9s;
+}
+
+
+.botones i{
+    font-size: 22px;
+}
+
+#form{
+    height: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#formu{
+    border-radius: 8px;
+    width: 86.5%;
+    height: auto;
+    margin: 15px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin-left: 6.8%;
+    margin-bottom: 130px;
+    -webkit-box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px -14px rgba(0,0,0,0.75);
+}
+
+/* Probando dentre del formulario */
+/*
+#form input {
+    flex: 1;
+    margin-right: 30px;
+} */
+
+#formu input:last-child {
+    margin-right: 0; /* Elimina el margen en el último elemento */
+} /* cierre de prueba */
+
+#formu1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    margin-right: 15px;
+}
+
+.formularioCo{
+    width: 560px; /* Ancho del campo */
+    height: auto;
+    padding: 18px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de la fuente */
+    border: 1px solid lightgray;
+    color: black;
+    margin-right: 15px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.formulario{
+    width: 560px; /* Ancho del campo */
+    height: auto;
+    padding: 18px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de la fuente */
+    border: 1px solid lightgray;
+    color: black;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.formulario2{
+    width: 94.5%; /* Ancho del campo */
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding: 18px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de la fuente */
+    border: 1px solid lightgray;
+    color: black;
+    display: inline-block;
+}
+
+#msg{
+    width: 97.5%; /* Ancho del campo */
+    height: auto;
+    padding: 18px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de la fuente */
+    border: 1px solid lightgray;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 50px;
+    resize: vertical;
+    overflow: hidden;
+    min-height: 10px;
+    max-height: 120px;
+    box-sizing: border-box;
+}
+
+.botonEnviar{
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    border: 1px solid #0280fe;
+    background-color: #0280fe;
+    color: white; /* Color del texto */
+    text-decoration: none;
+    border-radius: 30px; /* Bordes redondeados */
+    width: 130px; /* Ancho del botón */
+    height: auto; /* Alto del botón */
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: 0.7s ease;
+    margin: 25px auto;
+}
+
+#formu a:hover{
+    background-color: whitesmoke;
+    border: 1px solid #0280fe;
+    color: #0280fe;
+    transition: 0.9s;
+}
+
+/* pie de pagina */
+footer{
+    background-image: url(img/dos-hojas-monastera-sobre-fondo-negro.jpg);
+    color: white;
+    width: 100%;
+    height: 260px;
+    margin-top: 50px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.pie h3{
+    font-size: 20px;
+    font-size: bold;
+    margin-left: 50px;
+}
+
+footer hr{
+    height: 3px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    background-color: #0280fe;
+    margin-bottom: 5px;
+}
+
+.botPie{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botPie a{
+    transition: 0.5s ease;
+}
+
+.botPie a:hover{
+    color: #0280fe;
+    transition: 0.5s;
+}
