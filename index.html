@@ -1,220 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Gerlyn Familia Pilar · CV web</title>
+    <meta name="description" content="CV web de Gerlyn Familia Pilar, estudiante de Ingeniería en Sistemas Computacionales en Santo Domingo: desarrollo back-end con Java, ciberseguridad y soporte TI.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curricum Web</title>
-    <script src="https://kit.fontawesome.com/d6212ac556.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <header class="navbar">
-       <nav>
-            <h1 id="titulo"><a href=#inicio>Web CV</a></h1>
-                <ul>
-                    <li><a href=#inicio>Inicio</a></li>
-                    <li><a href=#about>Sobre mí</a></li>
-                    <li><a href=#educacion>Educación</a></li>
-                    <li><a href=#contacto>Contacto</a></li>              
-                </ul>
-       </nav>
+        <nav class="contenedor-nav">
+            <a href="#inicio" class="logo">Gerlyn<span>.</span></a>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="menu" class="menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <!-- Seccion principal -->
-         <section class="banner" id="inicio">
+        <section class="banner" id="inicio">
+            <div class="banner-fondo" aria-hidden="true"></div>
             <div class="presentacion">
-                <h1>Gerlyn Familia Pilar</h1>
-                <h3>Software developer</h3>
+                <h1 class="titulo-animado">Gerlyn Familia Pilar</h1>
+                <h2>Desarrollo, ciberseguridad y soporte TI</h2>
+                <p class="resumen">Estudiante de Ingeniería en Sistemas Computacionales en UNAPEC, con formación back-end en Java y Spring Boot y en ciberseguridad.</p>
+                <p class="estado"><span class="punto" aria-hidden="true"></span>Buscando mi primer rol en tecnología</p>
+                <div class="acciones">
+                    <a href="#contacto" class="boton boton-primario">Contáctame</a>
+                    <a href="https://github.com/GerlynFP" target="_blank" rel="noopener" class="boton boton-secundario"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
             </div>
-         </section>
+            <a href="#about" class="flecha" aria-label="Ir a Sobre mí"><i class="fa-solid fa-chevron-down"></i></a>
+        </section>
 
         <!-- seccion sobre mi -->
-        <section class="sobre" id="about">
-            <div class="flexbox-container" id="tarjeta">
-                <div>
-                    <div class="primerLado"> 
-                        <img src="img/faceless-businessman-user-profile-icon-business-leader-profile-picture-portrait-user-member-people-icon-in-flat-style-circle-button-with-avatar-photo-silhouette-free-png.webp" alt="imagen de ejemplo" id="img">
-                        <div class="info">
-                            <p><strong>Nombre: </strong>Gerlyn Familia</p>
-                            <p><strong>Perfil: </strong>Estudiante de ingeniería en sistemas</p>
-                            <p><strong>Email: </strong>gerlynfp@gmail.com</p>
-                            <p><strong>Telefono: </strong>(809) 952-2281</p> 
-                        </div>
-                        
-                    </div>
-                    <div class="primeroAbajo">
-                        <h3>Habilidades</h3>
-                        <div class="contenedor">
-                            <div class="skill">
-                                <p><Span>HTML</Span>85%</p>
-                                <div class="progreso" style="--wth:85%"></div>
-                            </div><!-- End Skills Item -->
+        <section class="seccion" id="about">
+            <h2 class="titulo-seccion">Sobre mí</h2>
+            <div class="sobre">
+                <figure class="codigo">
+                    <figcaption>Gerlyn.java</figcaption>
+<pre><code><span class="k">public record</span> <span class="t">Gerlyn</span>(
+    <span class="t">String</span> rol,
+    <span class="t">String</span> ubicacion,
+    <span class="t">List</span>&lt;<span class="t">String</span>&gt; idiomas,
+    <span class="t">List</span>&lt;<span class="t">String</span>&gt; stack
+) {
+    <span class="k">static</span> <span class="t">Gerlyn</span> <span class="f">perfil</span>() {
+        <span class="k">return new</span> <span class="t">Gerlyn</span>(
+            <span class="s">"Desarrollo, ciberseguridad y soporte TI"</span>,
+            <span class="s">"Santo Domingo Oeste, RD"</span>,
+            <span class="t">List</span>.<span class="f">of</span>(<span class="s">"Español"</span>, <span class="s">"Inglés B2"</span>),
+            <span class="t">List</span>.<span class="f">of</span>(<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>,
+                    <span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JS"</span>)
+        );
+    }
+}<span class="cursor" aria-hidden="true"></span></code></pre>
+                </figure>
 
-                            <div class="skill">
-                                <p><Span>CSS</Span>70%</p>
-                                <div class="progreso" style="--wth:70%"></div>
-                            </div><!-- End Skills Item -->
-
-                            <div class="skill">
-                                <p><Span>JavaScript</Span>60%</p>
-                                <div class="progreso" style="--wth:60%"></div>
-                            </div><!-- End Skills Item -->
-
-                            <div class="skill">
-                                <p><Span>Java</Span>50%</p>
-                                <div class="progreso" style="--wth:50%"></div>
-                            </div><!-- End Skills Item -->
-                            
-                        </div>
-                    </div>
+                <div class="texto-sobre">
+                    <p class="cita">Disciplina de procesos, pensamiento analítico y ganas de seguir aprendiendo.</p>
+                    <p>Soy estudiante de Ingeniería en Sistemas Computacionales en UNAPEC, bilingüe (español nativo,
+                        inglés B2), con formación en desarrollo back-end con Java y Spring Boot (Oracle Next Education)
+                        y en ciberseguridad, gobernanza y gestión de riesgos (Cyber Threat Management).</p>
+                    <p>Tengo más de dos años de experiencia en Teleperformance, primero en atención al cliente bilingüe
+                        y luego como Supervisor de Operaciones: verifiqué el cumplimiento de políticas y procesos,
+                        analicé métricas y KPIs, gestioné escalamientos y lideré equipos en un entorno de alto volumen.</p>
+                    <p>Busco mi primera posición en tecnología: soporte técnico, seguridad de la información,
+                        auditoría de sistemas, QA o desarrollo de software.</p>
                 </div>
-                
+            </div>
+        </section>
 
-                <div id="segundoLado">
-                    <h1 id="h1">Sobre mí<hr></h1>
-                    <p> <br>Estoy estudiando ingeniería en sistemas computacionales con la firme meta de convertirme en
-                        un desarrollador de software competente y exitoso. Estoy profundamente comprometido con este objetivo,
-                        y cada día me esfuerzo por ampliar y consolidar mis conocimientos en programación.</p> <br>
+        <!-- seccion de habilidades -->
+        <section class="seccion seccion-gris" id="habilidades">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <div class="grupos-habilidades">
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-code"></i> Desarrollo de software</h3>
+                    <ul class="chips">
+                        <li><i class="fa-brands fa-java"></i> Java</li>
+                        <li><i class="fa-solid fa-leaf"></i> Spring Boot</li>
+                        <li><i class="fa-brands fa-html5"></i> HTML</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        <li><i class="fa-solid fa-mobile-screen"></i> Apps móviles (fundamentos)</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Ciberseguridad y GRC</h3>
+                    <ul class="chips">
+                        <li>Gobernanza</li>
+                        <li>Gestión de riesgos</li>
+                        <li>Controles de seguridad</li>
+                        <li>Respuesta a incidentes</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-headset"></i> Soporte a usuarios</h3>
+                    <ul class="chips">
+                        <li>Diagnóstico y resolución de casos</li>
+                        <li>Análisis de causa raíz</li>
+                        <li>Documentación y escalamiento</li>
+                        <li>Servicio en español e inglés</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-chart-line"></i> Análisis y reportes</h3>
+                    <ul class="chips">
+                        <li>Métricas y KPIs</li>
+                        <li>Reportes de desempeño</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</h3>
+                    <ul class="chips">
+                        <li><i class="fa-brands fa-microsoft"></i> Microsoft 365</li>
+                        <li>Word · Excel · PowerPoint · Outlook</li>
+                        <li><i class="fa-brands fa-github"></i> Git y GitHub</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-people-group"></i> Competencias</h3>
+                    <ul class="chips">
+                        <li>Pensamiento analítico</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Liderazgo</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Adaptabilidad</li>
+                        <li>Tolerancia al estrés</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-                    <p>Para mí, aprender es
-                        un proceso continuo, y cada paso que doy en este camino representa una oportunidad para crecer y mejorar
-                        en este campo.</p> <br>
-
-                    <p>Estoy decidido a superar los desafíos que se presenten y a dedicar el tiempo y esfuerzo
-                        necesarios para alcanzar mis aspiraciones profesionales, confiando en que la dedicación y la perseverancia me llevarán al éxito.</p> <br>
-
-                    <p>Además, soy consciente de la importancia de mantenerse al día con las tendencias y avances tecnológicos
-                         en un campo tan dinámico como el desarrollo de software. Por ello, dedico tiempo a explorar nuevas herramientas, 
-                         lenguajes de programación y metodologías que me permitan estar a la vanguardia.</p>    
-                    
-                </div>
-                
+        <!-- seccion de experiencia -->
+        <section class="seccion" id="experiencia">
+            <h2 class="titulo-seccion">Experiencia</h2>
+            <div class="linea-tiempo">
+                <span class="linea-progreso" aria-hidden="true"></span>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-user-tie"></i></div>
+                    <div>
+                        <p class="fecha">Junio 2025 – Octubre 2026</p>
+                        <h3>Flex Operations Supervisor – Bilingual</h3>
+                        <p class="detalle">Teleperformance Larimar, Santo Domingo</p>
+                        <ul class="logros">
+                            <li>Verifiqué el cumplimiento de políticas, procesos y estándares operativos, documentando hallazgos y oportunidades de mejora.</li>
+                            <li>Monitoreé el desempeño del equipo con métricas, KPIs y reportes, identificando brechas y acciones de mejora.</li>
+                            <li>Lideré y coordiné un equipo de agentes bilingües, enfocado en la motivación y el cumplimiento de objetivos.</li>
+                            <li>Gestioné escalamientos identificando la causa raíz y aplicando soluciones equilibradas.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-headset"></i></div>
+                    <div>
+                        <p class="fecha">Septiembre 2024 – Junio 2025</p>
+                        <h3>Customer Service Expert Agent – Bilingual</h3>
+                        <p class="detalle">Teleperformance Larimar, Santo Domingo</p>
+                        <ul class="logros">
+                            <li>Brindé atención y soporte a clientes en español e inglés, de forma clara y concisa.</li>
+                            <li>Resolví casos identificando la causa raíz y aplicando la solución según los procedimientos establecidos.</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- seccion de educacion -->
-        <section id="educacion">
-            <div class="edu">
-                <h1>Educación <hr></h1>
-                <section>
-                    <!-- Primera tarjeta -->
-                    <div class="tarjetas-container">
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-                            <h3>Universidad APEC (UNAPEC)</h3>
-                            <p>Ingeniería en sistemas computacionales (actualmente cursando)</p>
-                        </div> <!-- cierre -->
-                        <!-- Segunda tarjeta -->
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-solid fa-school"></i>
-                            </div>
-                            <h3>Academia de idiomas APEC</h3>
-                            <p>Ingles de nivel basico hasta intermedio</p>
-                        </div> <!-- cierre -->
-                        <!-- Tercera tarjeta -->
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-html5"></i>
-                            </div>
-                            <h3>HTML 5</h3>
-                            <p>He realizado previos cursos en diferentes plataformas</p>
-                        </div><!-- cierre -->
-                         <!-- Cuarta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-css3-alt"></i>
-                            </div>
-                            <h3>CSS 3</h3>
-                            <p>He realizado previos cursos en diferentes plataformas</p>
-                        </div><!-- cierre -->
-                         <!-- Quinta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-js"></i>
-                            </div>
-                            <h3>JavaScript</h3>
-                            <p>Conocimientos basicos</p>
-                        </div><!-- cierre -->
-                         <!-- Sezta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-java"></i>
-                            </div>
-                            <h3>Java</h3>
-                            <p>Conocimientos basicos puesto que ya he realizado varios cursos</p>
-                        </div><!-- cierre -->
-
+        <section class="seccion seccion-oscura" id="educacion">
+            <h2 class="titulo-seccion">Educación</h2>
+            <div class="linea-tiempo">
+                <span class="linea-progreso" aria-hidden="true"></span>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <p class="fecha">Enero 2024 – Actualidad</p>
+                        <h3>Universidad APEC (UNAPEC)</h3>
+                        <p class="detalle">Ingeniería en Sistemas Computacionales</p>
                     </div>
-                </section>
-               
-                    
+                </article>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-language"></i></div>
+                    <div>
+                        <p class="fecha">Enero 2022 – Marzo 2024</p>
+                        <h3>Escuela de Idiomas APEC</h3>
+                        <p class="detalle">Programa de Inglés (básico a intermedio)</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-certificate"></i></div>
+                    <div>
+                        <h3>Certificaciones y formación complementaria</h3>
+                        <ul class="logros">
+                            <li><strong>Cyber Threat Management:</strong> gobernanza, gestión de riesgos, controles y evaluaciones de seguridad, respuesta a incidentes y recuperación ante desastres.</li>
+                            <li><strong>Oracle Next Education (ONE):</strong> Programa Back-end (F2 T6) y Formación Principiante en Programación (G6).</li>
+                            <li><strong>Formación Java Web:</strong> creación de aplicaciones con Spring Boot.</li>
+                            <li>Curso de Desarrollo de Apps Móviles · Aprende HTML desde Cero hasta Experto.</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- seccion de contacto -->
-        <section id="contacto">
+        <section class="seccion" id="contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <p class="intro-contacto">¿Tienes una oportunidad, un proyecto o una pregunta? Escríbeme y te respondo pronto.</p>
+
             <div class="contacto">
-                <h1>Contacto<hr></h1>
-                <h3><br>Las necesidades de él o de ella se derivan de algo, y aunque escapa de ello, lo sigue sintiendo como un deber con el que debe cumplir.</h3>
-                <section class="flexbox-container" id="tarjetaContactos">
-                    <div class="botones">
-                        <a> <i class="fa-solid fa-location-dot" id="icono"> </i> </a>
-                        <section id="sp">
-                            <span>Ubicación</span>
-                            <p>C. César Nicolás Penson, Sto. Dgo.</p>    
-                        </section>
+                <div class="medios">
+                    <a class="medio" href="https://maps.google.com/?q=Santo+Domingo+Oeste,+Republica+Dominicana" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span><strong>Ubicación</strong>Santo Domingo Oeste, R.D.</span>
+                    </a>
+                    <a class="medio" href="tel:+18299022281">
+                        <i class="fa-solid fa-phone"></i>
+                        <span><strong>Llámame</strong>(829) 902-2281</span>
+                    </a>
+                    <div class="medio medio-con-boton">
+                        <a href="mailto:gerlynfp@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span><strong>Email</strong>gerlynfp@gmail.com</span>
+                        </a>
+                        <button type="button" class="copiar" data-copiar="gerlynfp@gmail.com" aria-label="Copiar email">
+                            <i class="fa-regular fa-copy"></i><i class="fa-solid fa-check"></i>
+                            <span class="aviso" role="status"></span>
+                        </button>
                     </div>
-                    <div class="botones">
-                        <a><i class="fa-solid fa-phone"></i></a>
-                        <section id="sp">
-                            <span>Llamame</span>
-                            <p>(809) 952-2281</p>    
-                        </section>
+                    <a class="medio" href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span><strong>LinkedIn</strong>Gerlyn Familia Pilar</span>
+                    </a>
+                </div>
+
+                <!-- El formulario abre el cliente de correo con el mensaje listo -->
+                <form class="formulario" id="form-contacto">
+                    <div class="fila">
+                        <label>Nombre<input type="text" name="nombre" autocomplete="name" required></label>
+                        <label>Correo electrónico<input type="email" name="correo" autocomplete="email" autocapitalize="none" required></label>
                     </div>
-                    <div class="botones">
-                        <a><i class="fa-solid fa-envelope"></i></a>
-                        <section id="sp">
-                            <span>Email</span>
-                            <p>gerlynfp@gmail.com</p>    
-                        </section>
-                        
-                    </div>
-                </section>
-            </div>
-            <div id="formu">
-                <section id="form">
-                    <div id="formu1">
-                        <input class="formulario" type="text" placeholder="Nombre">
-                        <input class="formularioCo" type="text" placeholder="Correo electronico">
-                    </div>
-                    <input class="formulario2" type="text" placeholder="Asunto">
-                    <textarea name="mensaje" id="msg" placeholder="Mensaje"></textarea>
-                    <a class="botonEnviar">Enviar mensaje</a>
-                </section>
+                    <label>Asunto<input type="text" name="asunto" required></label>
+                    <label>Mensaje<textarea name="mensaje" rows="5" enterkeyhint="send" required></textarea></label>
+                    <button type="submit" class="boton boton-primario boton-enviar"><span class="texto-boton">Enviar mensaje</span> <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <section class="pie">
-            <div>
-                <h1>Gerlyn Familia</h1>
-                <h3>Software developer </h3> <hr>
-            </div>
+        <div class="pie">
+            <p class="nombre-pie">Gerlyn Familia</p>
+            <p>Desarrollo, ciberseguridad y soporte TI</p>
             <div class="botPie">
-                <a href="https://github.com/GerlynFP" target="_blank"> <i class="fa-brands fa-github"></i> </a>
-                <a href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+                <a href="https://github.com/GerlynFP" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:gerlynfp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-        </section>
+            <p class="copy">© <span id="anio"></span> Gerlyn Familia Pilar. Hecho a mano en Santo Domingo con HTML, CSS y JavaScript.</p>
+        </div>
     </footer>
-    
+
+    <script src="main.js"></script>
 </body>
 </html>
