@@ -19,6 +19,14 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarMenu()
 // formulario: arma un correo con los datos y confirma en el boton
 const form = document.getElementById('form-contacto');
 const textoBoton = form.querySelector('.texto-boton');
+// fundido corto al cambiar el texto del boton
+const cambiarTexto = texto => {
+    textoBoton.classList.add('cambiando');
+    setTimeout(() => {
+        textoBoton.textContent = texto;
+        textoBoton.classList.remove('cambiando');
+    }, 150);
+};
 form.addEventListener('submit', e => {
     e.preventDefault();
     const cuerpo = `${form.mensaje.value}\n\n${form.nombre.value}\n${form.correo.value}`;
@@ -26,10 +34,11 @@ form.addEventListener('submit', e => {
         '&body=' + encodeURIComponent(cuerpo);
     const boton = form.querySelector('.boton-enviar');
     boton.classList.add('enviado');
-    textoBoton.textContent = 'Abriendo tu correo';
-    setTimeout(() => {
+    cambiarTexto('Abriendo tu correo');
+    clearTimeout(boton.temporizador);
+    boton.temporizador = setTimeout(() => {
         boton.classList.remove('enviado');
-        textoBoton.textContent = 'Enviar mensaje';
+        cambiarTexto('Enviar mensaje');
     }, 3000);
 });
 
@@ -64,7 +73,11 @@ const navbar = document.querySelector('.navbar');
 const enlaces = [...menu.querySelectorAll('a')];
 const secciones = enlaces.map(a => document.querySelector(a.getAttribute('href')));
 const fondo = document.querySelector('.banner-fondo');
-const lineas = [...document.querySelectorAll('.linea-tiempo')];
+const lineas = [...document.querySelectorAll('.linea-tiempo')].map(linea => ({
+    linea,
+    progreso: linea.querySelector('.linea-progreso'),
+    tarjetas: [...linea.querySelectorAll('.tarjeta')],
+}));
 
 let pendiente = false;
 const actualizar = () => {
@@ -85,11 +98,12 @@ const actualizar = () => {
         if (y < innerHeight) fondo.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
 
         // la linea de tiempo se dibuja al pasar por ella
-        lineas.forEach(linea => {
+        lineas.forEach(({ linea, progreso, tarjetas }) => {
             const r = linea.getBoundingClientRect();
             const avance = Math.min(Math.max((innerHeight * 0.6 - r.top) / r.height, 0), 1);
-            linea.style.setProperty('--avance', avance);
-            linea.querySelectorAll('.tarjeta').forEach(t => {
+            // transform directo sobre la linea, sin variables CSS en el padre
+            progreso.style.transform = `scaleY(${avance})`;
+            tarjetas.forEach(t => {
                 t.classList.toggle('alcanzada', t.getBoundingClientRect().top < innerHeight * 0.6);
             });
         });
