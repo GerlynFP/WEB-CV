@@ -1,220 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerlyn Familia Pilar · Software developer</title>
+    <meta name="description" content="CV web de Gerlyn Familia Pilar, estudiante de Ingeniería en Sistemas y desarrollador de software en Santo Domingo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curricum Web</title>
-    <script src="https://kit.fontawesome.com/d6212ac556.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <header class="navbar">
-       <nav>
-            <h1 id="titulo"><a href=#inicio>Web CV</a></h1>
-                <ul>
-                    <li><a href=#inicio>Inicio</a></li>
-                    <li><a href=#about>Sobre mí</a></li>
-                    <li><a href=#educacion>Educación</a></li>
-                    <li><a href=#contacto>Contacto</a></li>              
-                </ul>
-       </nav>
+        <nav class="contenedor-nav">
+            <a href="#inicio" class="logo">Gerlyn<span>.</span></a>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="menu" class="menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <!-- Seccion principal -->
-         <section class="banner" id="inicio">
+        <section class="banner" id="inicio">
             <div class="presentacion">
+                <p class="saludo">Hola, soy</p>
                 <h1>Gerlyn Familia Pilar</h1>
-                <h3>Software developer</h3>
+                <h2>Software developer</h2>
+                <p class="resumen">Estudiante de Ingeniería en Sistemas Computacionales en UNAPEC, enfocado en desarrollo web y backend con Java.</p>
+                <div class="acciones">
+                    <a href="#contacto" class="boton boton-primario">Contáctame</a>
+                    <a href="https://github.com/GerlynFP" target="_blank" rel="noopener" class="boton boton-secundario"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
             </div>
-         </section>
+            <a href="#about" class="flecha" aria-label="Ir a Sobre mí"><i class="fa-solid fa-chevron-down"></i></a>
+        </section>
 
         <!-- seccion sobre mi -->
-        <section class="sobre" id="about">
-            <div class="flexbox-container" id="tarjeta">
-                <div>
-                    <div class="primerLado"> 
-                        <img src="img/faceless-businessman-user-profile-icon-business-leader-profile-picture-portrait-user-member-people-icon-in-flat-style-circle-button-with-avatar-photo-silhouette-free-png.webp" alt="imagen de ejemplo" id="img">
-                        <div class="info">
-                            <p><strong>Nombre: </strong>Gerlyn Familia</p>
-                            <p><strong>Perfil: </strong>Estudiante de ingeniería en sistemas</p>
-                            <p><strong>Email: </strong>gerlynfp@gmail.com</p>
-                            <p><strong>Telefono: </strong>(809) 952-2281</p> 
-                        </div>
-                        
-                    </div>
-                    <div class="primeroAbajo">
-                        <h3>Habilidades</h3>
-                        <div class="contenedor">
-                            <div class="skill">
-                                <p><Span>HTML</Span>85%</p>
-                                <div class="progreso" style="--wth:85%"></div>
-                            </div><!-- End Skills Item -->
+        <section class="seccion" id="about">
+            <h2 class="titulo-seccion">Sobre mí</h2>
+            <div class="sobre">
+                <aside class="perfil">
+                    <img src="img/avatar.webp" alt="Foto de perfil de Gerlyn Familia" class="avatar">
+                    <ul class="datos">
+                        <li><i class="fa-solid fa-user"></i><span><strong>Nombre</strong>Gerlyn Familia Pilar</span></li>
+                        <li><i class="fa-solid fa-graduation-cap"></i><span><strong>Perfil</strong>Estudiante de Ingeniería en Sistemas</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span><strong>Email</strong><a href="mailto:gerlynfp@gmail.com">gerlynfp@gmail.com</a></span></li>
+                        <li><i class="fa-solid fa-phone"></i><span><strong>Teléfono</strong><a href="tel:+18099522281">(809) 952-2281</a></span></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span><strong>Ubicación</strong>Santo Domingo, R.D.</span></li>
+                    </ul>
+                </aside>
 
-                            <div class="skill">
-                                <p><Span>CSS</Span>70%</p>
-                                <div class="progreso" style="--wth:70%"></div>
-                            </div><!-- End Skills Item -->
-
-                            <div class="skill">
-                                <p><Span>JavaScript</Span>60%</p>
-                                <div class="progreso" style="--wth:60%"></div>
-                            </div><!-- End Skills Item -->
-
-                            <div class="skill">
-                                <p><Span>Java</Span>50%</p>
-                                <div class="progreso" style="--wth:50%"></div>
-                            </div><!-- End Skills Item -->
-                            
-                        </div>
-                    </div>
+                <div class="texto-sobre">
+                    <p>Estoy estudiando Ingeniería en Sistemas Computacionales con la meta de convertirme en un
+                        desarrollador de software competente. Cada día me esfuerzo por ampliar y consolidar mis
+                        conocimientos en programación.</p>
+                    <p>Para mí aprender es un proceso continuo: cada proyecto es una oportunidad para crecer y
+                        mejorar. Me gusta enfrentar retos y dedicarles el tiempo que hagan falta.</p>
+                    <p>Sé lo rápido que cambia este campo, así que dedico tiempo a explorar nuevas herramientas,
+                        lenguajes y metodologías para mantenerme al día.</p>
                 </div>
-                
+            </div>
+        </section>
 
-                <div id="segundoLado">
-                    <h1 id="h1">Sobre mí<hr></h1>
-                    <p> <br>Estoy estudiando ingeniería en sistemas computacionales con la firme meta de convertirme en
-                        un desarrollador de software competente y exitoso. Estoy profundamente comprometido con este objetivo,
-                        y cada día me esfuerzo por ampliar y consolidar mis conocimientos en programación.</p> <br>
-
-                    <p>Para mí, aprender es
-                        un proceso continuo, y cada paso que doy en este camino representa una oportunidad para crecer y mejorar
-                        en este campo.</p> <br>
-
-                    <p>Estoy decidido a superar los desafíos que se presenten y a dedicar el tiempo y esfuerzo
-                        necesarios para alcanzar mis aspiraciones profesionales, confiando en que la dedicación y la perseverancia me llevarán al éxito.</p> <br>
-
-                    <p>Además, soy consciente de la importancia de mantenerse al día con las tendencias y avances tecnológicos
-                         en un campo tan dinámico como el desarrollo de software. Por ello, dedico tiempo a explorar nuevas herramientas, 
-                         lenguajes de programación y metodologías que me permitan estar a la vanguardia.</p>    
-                    
-                </div>
-                
+        <!-- seccion de habilidades -->
+        <section class="seccion seccion-gris" id="habilidades">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <div class="grupos-habilidades">
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-code"></i> Lenguajes</h3>
+                    <ul class="chips">
+                        <li><i class="fa-brands fa-java"></i> Java</li>
+                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+                    <ul class="chips">
+                        <li><i class="fa-brands fa-html5"></i> HTML5</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fa-solid fa-mobile-screen"></i> Diseño responsive</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</h3>
+                    <ul class="chips">
+                        <li><i class="fa-brands fa-git-alt"></i> Git</li>
+                        <li><i class="fa-brands fa-github"></i> GitHub</li>
+                    </ul>
+                </article>
+                <article class="grupo">
+                    <h3><i class="fa-solid fa-language"></i> Idiomas</h3>
+                    <ul class="chips">
+                        <li>Español (nativo)</li>
+                        <li>Inglés (intermedio)</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
         <!-- seccion de educacion -->
-        <section id="educacion">
-            <div class="edu">
-                <h1>Educación <hr></h1>
-                <section>
-                    <!-- Primera tarjeta -->
-                    <div class="tarjetas-container">
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-                            <h3>Universidad APEC (UNAPEC)</h3>
-                            <p>Ingeniería en sistemas computacionales (actualmente cursando)</p>
-                        </div> <!-- cierre -->
-                        <!-- Segunda tarjeta -->
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-solid fa-school"></i>
-                            </div>
-                            <h3>Academia de idiomas APEC</h3>
-                            <p>Ingles de nivel basico hasta intermedio</p>
-                        </div> <!-- cierre -->
-                        <!-- Tercera tarjeta -->
-                        <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-html5"></i>
-                            </div>
-                            <h3>HTML 5</h3>
-                            <p>He realizado previos cursos en diferentes plataformas</p>
-                        </div><!-- cierre -->
-                         <!-- Cuarta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-css3-alt"></i>
-                            </div>
-                            <h3>CSS 3</h3>
-                            <p>He realizado previos cursos en diferentes plataformas</p>
-                        </div><!-- cierre -->
-                         <!-- Quinta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-js"></i>
-                            </div>
-                            <h3>JavaScript</h3>
-                            <p>Conocimientos basicos</p>
-                        </div><!-- cierre -->
-                         <!-- Sezta tarjeta -->
-                         <div class="tarjeta">
-                            <div class="icono">
-                                <i class="fa-brands fa-java"></i>
-                            </div>
-                            <h3>Java</h3>
-                            <p>Conocimientos basicos puesto que ya he realizado varios cursos</p>
-                        </div><!-- cierre -->
-
+        <section class="seccion seccion-oscura" id="educacion">
+            <h2 class="titulo-seccion">Educación</h2>
+            <div class="linea-tiempo">
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <h3>Universidad APEC (UNAPEC)</h3>
+                        <p class="detalle">Ingeniería en Sistemas Computacionales</p>
+                        <p>Actualmente cursando.</p>
                     </div>
-                </section>
-               
-                    
+                </article>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-language"></i></div>
+                    <div>
+                        <h3>Academia de Idiomas APEC</h3>
+                        <p class="detalle">Inglés</p>
+                        <p>Nivel básico a intermedio.</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <div class="icono"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <h3>Cursos en línea</h3>
+                        <p class="detalle">HTML5, CSS3, JavaScript y Java</p>
+                        <p>Formación complementaria en distintas plataformas.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- seccion de contacto -->
-        <section id="contacto">
+        <section class="seccion" id="contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <p class="intro-contacto">¿Tienes una oportunidad, un proyecto o una pregunta? Escríbeme y te respondo pronto.</p>
+
             <div class="contacto">
-                <h1>Contacto<hr></h1>
-                <h3><br>Las necesidades de él o de ella se derivan de algo, y aunque escapa de ello, lo sigue sintiendo como un deber con el que debe cumplir.</h3>
-                <section class="flexbox-container" id="tarjetaContactos">
-                    <div class="botones">
-                        <a> <i class="fa-solid fa-location-dot" id="icono"> </i> </a>
-                        <section id="sp">
-                            <span>Ubicación</span>
-                            <p>C. César Nicolás Penson, Sto. Dgo.</p>    
-                        </section>
+                <div class="medios">
+                    <a class="medio" href="https://maps.google.com/?q=Santo+Domingo,+Republica+Dominicana" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span><strong>Ubicación</strong>Santo Domingo, R.D.</span>
+                    </a>
+                    <a class="medio" href="tel:+18099522281">
+                        <i class="fa-solid fa-phone"></i>
+                        <span><strong>Llámame</strong>(809) 952-2281</span>
+                    </a>
+                    <a class="medio" href="mailto:gerlynfp@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><strong>Email</strong>gerlynfp@gmail.com</span>
+                    </a>
+                    <a class="medio" href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span><strong>LinkedIn</strong>Gerlyn Familia Pilar</span>
+                    </a>
+                </div>
+
+                <!-- El formulario abre el cliente de correo con el mensaje listo -->
+                <form class="formulario" id="form-contacto">
+                    <div class="fila">
+                        <label>Nombre<input type="text" name="nombre" required></label>
+                        <label>Correo electrónico<input type="email" name="correo" required></label>
                     </div>
-                    <div class="botones">
-                        <a><i class="fa-solid fa-phone"></i></a>
-                        <section id="sp">
-                            <span>Llamame</span>
-                            <p>(809) 952-2281</p>    
-                        </section>
-                    </div>
-                    <div class="botones">
-                        <a><i class="fa-solid fa-envelope"></i></a>
-                        <section id="sp">
-                            <span>Email</span>
-                            <p>gerlynfp@gmail.com</p>    
-                        </section>
-                        
-                    </div>
-                </section>
-            </div>
-            <div id="formu">
-                <section id="form">
-                    <div id="formu1">
-                        <input class="formulario" type="text" placeholder="Nombre">
-                        <input class="formularioCo" type="text" placeholder="Correo electronico">
-                    </div>
-                    <input class="formulario2" type="text" placeholder="Asunto">
-                    <textarea name="mensaje" id="msg" placeholder="Mensaje"></textarea>
-                    <a class="botonEnviar">Enviar mensaje</a>
-                </section>
+                    <label>Asunto<input type="text" name="asunto" required></label>
+                    <label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label>
+                    <button type="submit" class="boton boton-primario">Enviar mensaje <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <section class="pie">
-            <div>
-                <h1>Gerlyn Familia</h1>
-                <h3>Software developer </h3> <hr>
-            </div>
+        <div class="pie">
+            <p class="nombre-pie">Gerlyn Familia</p>
+            <p>Software developer</p>
             <div class="botPie">
-                <a href="https://github.com/GerlynFP" target="_blank"> <i class="fa-brands fa-github"></i> </a>
-                <a href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+                <a href="https://github.com/GerlynFP" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gerlyn-familia-pilar-81b044215/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:gerlynfp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-        </section>
+            <p class="copy">© <span id="anio"></span> Gerlyn Familia Pilar</p>
+        </div>
     </footer>
-    
+
+    <script>
+        // menu movil
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.getElementById('menu');
+        toggle.addEventListener('click', () => {
+            const abierto = menu.classList.toggle('abierto');
+            toggle.setAttribute('aria-expanded', abierto);
+        });
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            menu.classList.remove('abierto');
+            toggle.setAttribute('aria-expanded', false);
+        }));
+
+        // formulario: arma un correo con los datos
+        document.getElementById('form-contacto').addEventListener('submit', e => {
+            e.preventDefault();
+            const f = e.target;
+            const cuerpo = `${f.mensaje.value}\n\n${f.nombre.value}\n${f.correo.value}`;
+            window.location.href = 'mailto:gerlynfp@gmail.com?subject=' + encodeURIComponent(f.asunto.value) +
+                '&body=' + encodeURIComponent(cuerpo);
+        });
+
+        document.getElementById('anio').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
