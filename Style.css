@@ -346,7 +346,7 @@ body::-webkit-scrollbar-thumb {
 /* Habilidades */
 .grupos-habilidades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }
 
@@ -441,6 +441,30 @@ body::-webkit-scrollbar-thumb {
 .tarjeta p {
     color: var(--gris);
     font-size: 15px;
+}
+
+.tarjeta .fecha {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.logros {
+    margin-top: 10px;
+    padding-left: 18px;
+    list-style: disc;
+    color: #444;
+    font-size: 15px;
+}
+
+.logros li {
+    margin-bottom: 6px;
+}
+
+.logros li::marker {
+    color: var(--azul);
 }
 
 /* Contacto */
@@ -656,6 +680,8 @@ footer {
     }
 
     .tarjeta {
+        flex-direction: column;
+        gap: 12px;
         padding: 20px;
     }
 }
