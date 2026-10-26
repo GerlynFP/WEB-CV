@@ -68,12 +68,31 @@ titulo.innerHTML = titulo.textContent.trim().split(/\s+/)
     .join(' ');
 requestAnimationFrame(() => document.body.classList.add('cargado'));
 
+// codigo de Sobre mi: las lineas aparecen una vez, en orden, al llegar a la seccion
+const codigo = document.querySelector('.codigo code');
+if (codigo) {
+    const cursor = codigo.querySelector('.cursor').outerHTML;
+    const lineas = codigo.innerHTML.replace(cursor, '').split('\n');
+    codigo.innerHTML = lineas
+        .map((l, i) => `<span class="linea" style="--i:${i}">${l}${i === lineas.length - 1 ? cursor : ''}</span>`)
+        .join('\n');
+    const figura = codigo.closest('.codigo');
+    if (reducirMovimiento || !('IntersectionObserver' in window)) {
+        figura.classList.add('escrito');
+    } else {
+        const obs = new IntersectionObserver(([e]) => {
+            if (e.isIntersecting) { figura.classList.add('escrito'); obs.disconnect(); }
+        }, { threshold: 0.35 });
+        obs.observe(figura);
+    }
+}
+
 // nav: sombra al bajar y enlace activo segun la seccion visible
 const navbar = document.querySelector('.navbar');
 const enlaces = [...menu.querySelectorAll('a')];
 const secciones = enlaces.map(a => document.querySelector(a.getAttribute('href')));
 const fondo = document.querySelector('.banner-fondo');
-const lineas = [...document.querySelectorAll('.linea-tiempo')].map(linea => ({
+const lineasTiempo = [...document.querySelectorAll('.linea-tiempo')].map(linea => ({
     linea,
     progreso: linea.querySelector('.linea-progreso'),
     tarjetas: [...linea.querySelectorAll('.tarjeta')],
@@ -98,7 +117,7 @@ const actualizar = () => {
         if (y < innerHeight) fondo.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
 
         // la linea de tiempo se dibuja al pasar por ella
-        lineas.forEach(({ linea, progreso, tarjetas }) => {
+        lineasTiempo.forEach(({ linea, progreso, tarjetas }) => {
             const r = linea.getBoundingClientRect();
             const avance = Math.min(Math.max((innerHeight * 0.6 - r.top) / r.height, 0), 1);
             // transform directo sobre la linea, sin variables CSS en el padre
